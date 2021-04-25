@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.PayActivity">
+
+    <TextView
+        android:id="@+id/balanceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/balance"
+        android:textColor="@color/lightBlue"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divideLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginVertical="20dp"
+        android:background="@color/lineColor"
+        app:layout_constraintTop_toBottomOf="@id/balanceTitle" />
+
+    <TextView
+        android:id="@+id/addBalanceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/add_balance"
+        android:textColor="@color/lightBlue"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/amountEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divideLine" />
+
+    <TextView
+        android:id="@+id/amountCurrencyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="18dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/amountEditText"
+        app:layout_constraintStart_toStartOf="@id/amountEditText"
+        app:layout_constraintTop_toBottomOf="@id/addBalanceTextView"
+        app:layout_constraintTop_toTopOf="@id/amountEditText" />
+
+    <EditText
+        android:id="@+id/amountEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="10dp"
+        android:autofillHints="@string/amount"
+        android:maxLength="20"
+        android:backgroundTint="@color/lineColor"
+        android:hint="@string/amount"
+        android:inputType="number"
+        android:paddingHorizontal="15dp"
+        android:paddingBottom="18dp"
+        android:textColorHint="@color/gray"
+        app:layout_constraintStart_toEndOf="@id/amountCurrencyText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addBalanceTextView" />
+
+    <TextView
+        android:id="@+id/fullNameOnCardTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/full_name_on_card"
+        android:textColor="@color/lightBlue"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/fullNameEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/amountEditText" />
+
+    <EditText
+        android:id="@+id/fullNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="10dp"
+        android:autofillHints="@string/example_john_jason_doe"
+        android:backgroundTint="@color/lineColor"
+        android:hint="@string/example_john_jason_doe"
+        android:inputType="textPersonName"
+        android:paddingBottom="18dp"
+        android:textColorHint="@color/gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fullNameOnCardTextView" />
+
+    <TextView
+        android:id="@+id/creditCardNumberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/credit_card_number"
+        android:textColor="@color/lightBlue"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/CreditCardNumberEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fullNameEditText" />
+
+    <EditText
+        android:id="@+id/CreditCardNumberEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="10dp"
+        android:maxLength="16"
+        android:autofillHints="@string/ex_0000_0000_0000_0000"
+        android:backgroundTint="@color/lineColor"
+        android:hint="@string/ex_0000_0000_0000_0000"
+        android:inputType="number"
+        android:paddingBottom="18dp"
+        android:textColorHint="@color/gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/creditCardNumberTextView" />
+
+    <TextView
+        android:id="@+id/expirationDateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/expiration_date"
+        android:textColor="@color/lightBlue"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/expirationMonthEditText"
+        app:layout_constraintEnd_toStartOf="@id/cvvCodeTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/CreditCardNumberEditText" />
+
+    <EditText
+        android:id="@+id/expirationMonthEditText"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="10dp"
+        android:autofillHints="@string/mm"
+        android:backgroundTint="@color/lineColor"
+        android:hint="@string/mm"
+        android:inputType="date"
+        android:maxLength="2"
+        android:paddingBottom="20dp"
+        android:textColorHint="@color/gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/expirationDateTextView" />
+
+    <TextView
+        android:id="@+id/expirationDateLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="20dp"
+        android:textSize="18sp"
+        android:textColorHint="@color/gray"
+        android:text="@string/line"
+        app:layout_constraintTop_toTopOf="@id/expirationMonthEditText"
+        app:layout_constraintBottom_toBottomOf="@id/expirationMonthEditText"
+        app:layout_constraintStart_toEndOf="@id/expirationMonthEditText"
+        app:layout_constraintEnd_toStartOf="@id/expirationYearEditText"
+        app:layout_constraintTop_toBottomOf="@id/expirationDateTextView" />
+
+    <EditText
+        android:id="@+id/expirationYearEditText"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        android:autofillHints="@string/yy"
+        android:backgroundTint="@color/lineColor"
+        android:hint="@string/yy"
+        android:inputType="date"
+        android:maxLength="2"
+        android:paddingBottom="20dp"
+        android:textColorHint="@color/gray"
+        app:layout_constraintStart_toEndOf="@id/expirationDateLine"
+        app:layout_constraintTop_toBottomOf="@id/expirationDateTextView" />
+
+    <TextView
+        android:id="@+id/cvvCodeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/cvv_code"
+        android:textColor="@color/lightBlue"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/cvvCodeEditText"
+        app:layout_constraintStart_toEndOf="@id/expirationDateTextView"
+        app:layout_constraintTop_toBottomOf="@id/CreditCardNumberEditText" />
+
+    <EditText
+        android:id="@+id/cvvCodeEditText"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:autofillHints="@string/ex_000"
+        android:backgroundTint="@color/lineColor"
+        android:hint="@string/ex_000"
+        android:inputType="date"
+        android:maxWidth="12dp"
+        android:maxLength="3"
+        android:paddingBottom="20dp"
+        android:textColorHint="@color/gray"
+        app:layout_constraintStart_toStartOf="@id/cvvCodeTextView"
+        app:layout_constraintTop_toBottomOf="@id/cvvCodeTextView" />
+
+    <Button
+        android:id="@+id/buyNowButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/lightBlue"
+        android:padding="15dp"
+        android:text="@string/buy_now"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Shualeduri</string>
+    <string name="black_top">black_top</string>
+    <string name="black_turtleneck_top">Black turtleneck top</string>
+    <string name="_42">$42</string>
+    <string name="_62">$62</string>
+    <string name="_4_5">4.5</string>
+    <string name="very_good">Very Good</string>
+    <string name="_49_reviews">49 Reviews</string>
+    <string name="description">Description</string>
+    <string name="description_example">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.</string>
+    <string name="add_to_cart">add to cart</string>
+    <string name="buy_now">Buy now</string>
+    <string name="balance">Balance</string>
+    <string name="add_balance">Add balance</string>
+    <string name="amount">Amount</string>
+    <string name="full_name_on_card">Full name on Card</string>
+    <string name="example_john_jason_doe">Example: John Jason Doe</string>
+    <string name="credit_card_number">Credit Card Number</string>
+    <string name="ex_0000_0000_0000_0000">Ex: 0000 0000 0000 0000</string>
+    <string name="expiration_date">Expiration date</string>
+    <string name="mm">MM</string>
+    <string name="yy">YY</string>
+    <string name="cvv_code">CVV Code</string>
+    <string name="ex_000">Ex: 000</string>
+    <string name="currency">$</string>
+    <string name="line">/</string>
+    <string name="confirm">confirm</string>
+    <string name="price">price</string>
+    <string name="submit">submit</string>
+
+</resources>
