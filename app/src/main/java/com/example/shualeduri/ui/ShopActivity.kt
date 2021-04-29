@@ -22,7 +22,7 @@ class ShopActivity : AppCompatActivity() {
         val addToCartButton = findViewById<Button>(R.id.addToCartButton)
 
         //cross the old price
-        itemOldPrice.paintFlags = itemOldPrice.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
+        itemOldPrice.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
 
         //navigate to paying
         buyNowButton.setOnClickListener {
